@@ -393,7 +393,14 @@ console.log('Tu salario por hora es ' + calcularSalarioHora(salarioAnual));
 //
 // No se olviden de hacer un console.log para ver el resultado!
 //
-
+const operador = '-';
+numeroUno = Number(prompt('Ingrese el primer número'));
+numeroDos = Number(prompt('Ingrese el segundo número'));
+if (operador === "+") {
+    console.log(sumar(numeroUno,numeroDos));
+} else {
+    console.log(restar(numeroUno,numeroDos));
+}
 // TAREA: Cambiar el operador a '-', y fijarse que llame a la función 'restar' en vez de a la de 'sumar'.
 
 
