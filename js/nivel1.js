@@ -37,7 +37,8 @@
         Esta línea de código va a mostrar 'Hola Mundo!' en la consola del navegador,
         una vez que  se recargue index.html.
 */
-
+//alert('Hola Mundo');
+//console.log('Hola, Mundo!');
 // Tarea: Ahora te toca a vos! Acá abajo escribí una alerta que diga "Hola mundo!"
 
 
@@ -46,7 +47,7 @@
 
 
 // Tarea: Ahora probá hacer un console.log de un mensaje que queramos.
-
+// console.log('Hola');
 
 // Consejo: Para recargar el navegador podemos apretar 'CMD + R' en Mac y 'CTRL + R' en
 //      Windows.
@@ -55,7 +56,8 @@
 // Consejo: El atajo del teclado para guardar cambios a un archivo es 'CMD + S' en Mac y 'CTRL + S' en
 //      Windows.
 
-
+// let nombreDeVariable;
+// console.log("nombre de la variable es " + nombreDeVariable);
 /*
     Variables
     =========
@@ -80,6 +82,9 @@
     También podemos crear (declarar) y darle valor (asignar) a una variable en un solo paso (la INICIALIZAMOS).
 
     let nuevaVariable = 1;
+let nombre = "Matias";
+console.log("Mi nombre es " + nombre);
+
 
     Como pueden ver, le podemos dar distintos tipos de valores a nuestras variables -
     Cadenas de texto (String), Numeros (Number), Booleanos (Boolean), etc.
@@ -101,7 +106,8 @@
 */
 
 // TAREA: Creá 2 variables indefinidas, llamadas numeroUno y numeroDos.
-
+let numeroUno;
+let numeroDos;
 
 /*
     Podés usar el nombre de tus variables pare representar qué información tienen adentro, por ejemplo:
@@ -114,8 +120,13 @@
 
 // Crear 2 variables nuevas, una con tu nombre, la segunda con tu edad. Dales un nombre apropriado y
 // mostralas con un alert.
-
-
+/*
+let nombre = "Matias";
+let edad = 22;
+alert(nombre);
+alert(edad);
+alert(nombre + edad);
+*/
 // Consejo: para mostrar 2 variables de texto al mismo tiempo, las podés unir usando el signo '+'. Ejemplo:
 
 /*
@@ -125,7 +136,7 @@
 * alert(nombre + apellido)
 *
 * */
-
+//alert('Mi nombre es ' + nombre + ' ' + 'y mi edad es ' + edad);
 
 /*
     Constantes
@@ -149,10 +160,11 @@
 */
 
 // TAREA: Crear una constante y mostrarla con un alert
-
+//const IVA = 21;
+//alert(IVA);
 
 // TAREA: Intentar asignar un valor a una constante y ver qué pasa (mirar la consola)
-
+//IVA = 20;
 
 // Consejo: No te olvides de comentar (//) los alerts y los errores intencionales (como en la tarea anterior) para
 // que los alerts no aparezcan cada vez, y para que los errores no hagan que el programa se detenga.
@@ -182,7 +194,10 @@
 // * 3ra variable llamada resultadoMultiplicacion que va a ser igual a
 // la 1ra variable multiplicada (con el operador *) por la 2nda variable.
 // Mostrar el valor de resultadoMultiplicacion con un alert o un console.log
-
+//let diez = 10;
+//let tres = 3;
+//let resultadoMultiplicacion = diez * tres;
+//console.log(resultadoMultiplicacion);
 
 /*
     Funciones
@@ -238,18 +253,70 @@
 // Escribí código para que acepte 2 argumentos (numero1 y numero2)
 // Escribí código para que devuelva (return) la suma de numero1 y numero2
 // Ejecutá la función sumar y mostrá su resultado en la consola
-
-
+function sumar(numero1,numero2){
+    return numero1 + numero2;
+}
+//console.log(sumar(2,13));
 // TAREA: Ahora creemos otra función llamada 'restar'
 //       Que acepte 2 números como parámetro y los reste, y que devuelva ese valor.
 // Ejecutá la función con los números 5 y 1 y mostralos con console.log
-
-
+function restar(numero1,numero2){
+    return numero1 - numero2;
+}
+//console.log(restar(2,13));
 // Consejo: Sabías que en vez de pasar los números directamente a tu función podés crear variables con esos números
 // y pasarlos como parámetros? Probalo!
+/*
+function saludar(nombre){
+    return 'Hola ' + nombre;
+}
 
+let nombreUsuario = prompt('Ingrese su nombre');
+console.log(saludar(nombreUsuario));
+*/
 // Consejo: Dejá las funciones como están, no las comentes, las vamos a usar de nuevo.
 
+/*
+function calcularEdadUsuario(añoActual,añoNacimiento){
+    return añoActual - añoNacimiento;
+}
+const añoActual = Number(prompt('Que años es?'));
+const añoNacimiento = Number(prompt('En que año naciste?'));
+
+let edadUsuario = calcularEdad(añoNacimiento,añoActual);
+console.log('Tu edad es ' + edadUsuario);
+*/
+/*
+function calcularSalarioAnual(salarioMensual){
+    const mesesEnUnAño = 12;
+    return salarioMensual * mesesEnUnAño;
+}
+function calcularSalarioMensual(salarioAnual){
+    const mesesEnUnAño = 12;
+    return salarioAnual /  mesesEnUnAño;
+}
+function calcularSalarioDiario(salarioAnual){
+    const diasEnUnAño = 365;
+    return salarioAnual / diasEnUnAño;
+}
+function calcularSalarioSemanal(salarioAnual){
+    const semanasEnUnAño = 52;
+    return salarioAnual / semanasEnUnAño;
+}
+function calcularSalarioHora(salarioAnual){
+    const diasEnUnAño = 365;
+    const horasDeTrabajoPorDia = 8;
+    return salarioAnual / diasEnUnAño / horasDeTrabajoPorDia;
+}
+
+let salarioAnual = Number(prompt('Cual es tu salario anual?'));
+let salarioMensual = Number(prompt('Cual es tu salario mensual?'));
+console.log('Tu salario mensual es ' + calcularSalarioMensual(salarioAnual));
+console.log('Tu salario anual es ' + calcularSalarioAnual(salarioMensual));
+console.log('Tu salario semanal es ' + calcularSalarioSemanal(salarioAnual));
+console.log('Tu salario diaro es ' + calcularSalarioDiario(salarioAnual));
+console.log('Tu salario por hora es ' + calcularSalarioHora(salarioAnual));
+*/
 /*
     Condicionales If-Else
     ==================
