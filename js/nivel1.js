@@ -20,7 +20,6 @@
     Cuando estás escribiendo código que querés que la máquina ejecute, ponelos AFUERA de los bloques de comentario.
 */
 
-
 /*
     Mostrando texto
     ===============
@@ -41,17 +40,14 @@
 //console.log('Hola, Mundo!');
 // Tarea: Ahora te toca a vos! Acá abajo escribí una alerta que diga "Hola mundo!"
 
-
 // Tarea: Una vez que la alerta funcione, comentala poniendo '//' en la línea donde está el código y guardá los cambios.
 // Una vez que recargás la página, ya no debería aparecer más.
-
 
 // Tarea: Ahora probá hacer un console.log de un mensaje que queramos.
 // console.log('Hola');
 
 // Consejo: Para recargar el navegador podemos apretar 'CMD + R' en Mac y 'CTRL + R' en
 //      Windows.
-
 
 // Consejo: El atajo del teclado para guardar cambios a un archivo es 'CMD + S' en Mac y 'CTRL + S' en
 //      Windows.
@@ -130,12 +126,12 @@ alert(nombre + edad);
 // Consejo: para mostrar 2 variables de texto al mismo tiempo, las podés unir usando el signo '+'. Ejemplo:
 
 /*
-* let nombre = 'Fabricio'
-* let apellido = 'Sodano'
-*
-* alert(nombre + apellido)
-*
-* */
+ * let nombre = 'Fabricio'
+ * let apellido = 'Sodano'
+ *
+ * alert(nombre + apellido)
+ *
+ * */
 //alert('Mi nombre es ' + nombre + ' ' + 'y mi edad es ' + edad);
 
 /*
@@ -253,14 +249,14 @@ alert(nombre + edad);
 // Escribí código para que acepte 2 argumentos (numero1 y numero2)
 // Escribí código para que devuelva (return) la suma de numero1 y numero2
 // Ejecutá la función sumar y mostrá su resultado en la consola
-function sumar(numero1,numero2){
+function sumar(numero1, numero2) {
     return numero1 + numero2;
 }
 //console.log(sumar(2,13));
 // TAREA: Ahora creemos otra función llamada 'restar'
 //       Que acepte 2 números como parámetro y los reste, y que devuelva ese valor.
 // Ejecutá la función con los números 5 y 1 y mostralos con console.log
-function restar(numero1,numero2){
+function restar(numero1, numero2) {
     return numero1 - numero2;
 }
 //console.log(restar(2,13));
@@ -393,16 +389,20 @@ console.log('Tu salario por hora es ' + calcularSalarioHora(salarioAnual));
 //
 // No se olviden de hacer un console.log para ver el resultado!
 //
+/*
 const operador = '-';
 numeroUno = Number(prompt('Ingrese el primer número'));
 numeroDos = Number(prompt('Ingrese el segundo número'));
+let resultado;
 if (operador === "+") {
-    console.log(sumar(numeroUno,numeroDos));
+    resultado = (sumar(numeroUno,numeroDos));
 } else {
-    console.log(restar(numeroUno,numeroDos));
+    resultado = (restar(numeroUno,numeroDos));
 }
-// TAREA: Cambiar el operador a '-', y fijarse que llame a la función 'restar' en vez de a la de 'sumar'.
 
+console.log(`El resultado de ${numeroUno} ${operador} ${numeroDos} es ${resultado}`);
+// TAREA: Cambiar el operador a '-', y fijarse que llame a la función 'restar' en vez de a la de 'sumar'.
+*/
 
 /*
     'If' - 'Else if' - 'Else'
@@ -433,20 +433,38 @@ if (operador === "+") {
 */
 
 // TAREA: Creemos 2 funciones más: dividir y multiplicar.
-
-
-
-
+function dividir(numero1, numero2) {
+    return numero1 / numero2;
+}
+function multiplicar(numero1, numero2) {
+    return numero1 * numero2;
+}
 
 // TAREA: Reescribamos el if-else que teníamos y extendámolos, agregando:
 //       'else if' el 'operador' es igual a '-' - llamar a la función 'restar'
 //       'else if' el 'operador' es igual a '/' - llamar a la función 'dividir'.
 //       'else if' el 'operador' es igual a '*' - llamar a la función 'multiplicar'.
 //       else console.log - "Perdón, no conozco ese operador".
-
-
-
-
+const operador = prompt('Ingrese un operador (+,-,*,/)');
+const numero1 = 5;
+const numero2 = 7;
+let resultado;
+if (operador === '+') {
+    resultado = sumar(numero1, numero2);
+} else if (operador === '-') {
+    resultado = restar(numero1, numero2);
+} else if (operador === '*') {
+    resultado = multiplicar(numero1, numero2);
+} else if (operador === '/') {
+    resultado = dividir(numero1, numero2);
+} else {
+    console.log(`No entiendo el operador ${operador}`);
+}
+if (resultado) {
+    console.log(
+        `El resultado de ${numero1} ${operador} ${numero2} es ${resultado}`
+    );
+}
 
 /*
     Operadores Booleanos
@@ -471,10 +489,8 @@ if (operador === "+") {
     let maradonaMejorQuePele = true;
 */
 
-
 // TAREA: usando el operador !, Intentá invertir una variable (de true a false, o de false a true) e imprimí el
 // resultado en la consola.
-
 
 ////////////////////////////////////////////////////////////////////////////
 // Felicitaciones! Terminaste el Nivel 1 de la introducción a JavaScript! //
