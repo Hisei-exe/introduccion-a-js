@@ -7,13 +7,15 @@
 // Imprimir "Hola " y el nombre, " te llamás igual que mi ..."
 // Si no, simplemente imprimir "Hola " + nombre!
 /*
-const miNombre = 'Matias';
-const nombreUsuario = prompt('Ingrese su nombre');
-const nombreVecino = 'Facundo';
-if (nombreUsuario.toLowerCase() === miNombre.toLowerCase()) {
-    console.log(`Hola, Tocayo! Yo también me llamo ${nombreUsuario}`);
-} else if (nombreUsuario.toLowerCase() === nombreVecino.toLowerCase()) {
-    console.log(`Hola ${nombreUsuario} te llamas igual que mi vecino.`);
+const MI_NOMBRE = 'Matias';
+const NOMBRE_VECINO = 'Facundo';
+const nombreUsuario = prompt('Ingrese su nombre') || '';
+if (MI_NOMBRE.toLowerCase() === nombreUsuario.toLowerCase()) {
+    console.log(`Hola, Tocayo! Yo también me llamo ${MI_NOMBRE}`);
+} else if (NOMBRE_VECINO.toLowerCase() === nombreUsuario.toLowerCase()) {
+    console.log(`Hola ${nombreUsuario} te llamás igual que mi vecino.`);
+} else if (nombreUsuario.trim() === '') {
+    console.log('No ingresaste un nombre.');
 } else {
     console.log(`Hola ${nombreUsuario}!`);
 }
@@ -22,12 +24,17 @@ if (nombreUsuario.toLowerCase() === miNombre.toLowerCase()) {
 // Preguntar la edad del usuario
 // Hacerle saber si tiene más, menos ó la misma edad que nosotros.
 /*
-const miEdad = 22;
+const MI_EDAD = 22;
 const edadUsuario = Number(prompt('Ingrese su edad'));
-if (edadUsuario === miEdad) {
+console.log(edadUsuario);
+if (edadUsuario === MI_EDAD) {
     console.log('Tenemos la misma edad!');
+} else if (edadUsuario < MI_EDAD) {
+    console.log('Sos menor que yo.');
+} else if (edadUsuario > MI_EDAD) {
+    console.log('Sos mayor que yo.');
 } else {
-    console.log('No tenemos la misma edad!');
+    console.log('No entendí tu respuesta.');
 }
 */
 //Tarea 3:
@@ -39,19 +46,23 @@ if (edadUsuario === miEdad) {
 // Si no entendemos la respuesta, le decimos que no entendimos la respuesta.
 // Punto bonus: SI, NO, Si, No, si, no.
 /*
-const usuarioTieneDocumento = prompt('Tiene documento?(Si/No)');
-if (usuarioTieneDocumento.toLowerCase() === 'si') {
-    let edadUsuario = Number(prompt('Qué edad tenes?'));
-    if (edadUsuario > 18) {
-        console.log('Podes pasar al bar.');
-    } else if (edadUsuario < 18) {
-        console.log('No podes pasar al bar.');
+const EDAD_MINIMA_PARA_ENTRAR = 18;
+const RESPUESTA_SI = 'si';
+const RESPUESTA_NO = 'no';
+
+const usuarioTieneDocumento = (prompt('Tenés documento?') || '').toLowerCase();
+if (usuarioTieneDocumento === RESPUESTA_SI) {
+    const edadUsuario = Number(prompt('Qué edad tenes?'));
+    if (edadUsuario >= EDAD_MINIMA_PARA_ENTRAR) {
+        console.log('Bienvenido al bar!');
+    } else if (edadUsuario < EDAD_MINIMA_PARA_ENTRAR) {
+        console.log('No podés entrar al bar.');
     } else {
-        console.log('No entendimos la respuesta.');
+        console.log('No entendí la respuesta.');
     }
-} else if (usuarioTieneDocumento.toLowerCase() === 'no') {
-    console.log('No podes pasar al bar.');
+} else if (usuarioTieneDocumento === RESPUESTA_NO) {
+    console.log('Se necesita documento para entrar al bar.');
 } else {
-    console.log('No entendimos la respuesta.');
+    console.log('No entendí la respuesta.');
 }
 */

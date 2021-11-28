@@ -42,12 +42,7 @@
 // TAREA: Crea tu propio array, llamado comidasFavoritas, y escribi dentro algunas
 //       cosas que te gustan.
 
-
-
-
-
-
-
+//let comidasFavoritas = ['empanada', 'pizza', 'milanesa'];
 /*
     Tamaño del Array
     ================
@@ -64,8 +59,7 @@
 // TAREA: Verifique cuántos valores tiene en su array comidasFavoritas.
 // imprimi utilizando console.log el resultado.
 
-
-
+//console.log(comidasFavoritas.length);
 
 
 
@@ -91,7 +85,7 @@
 // TAREA: Obtené el tercer elemento de tu array comidasFavoritas e imprimilo utilizando console.log.
 
 
-
+//console.log(comidasFavoritas[2]);
 
 
 
@@ -117,12 +111,12 @@
 
 
 
-
+//comidasFavoritas[0] = 'corazon';
 
 
 // TAREA: console.log todo el array para verificar.
 
-
+//console.log(comidasFavoritas);
 
 
 
@@ -145,10 +139,11 @@
 */
 
 // TAREA: Extendamos tu lista de comidasFavoritas y agreguemos un valor más.
-
-
-
-
+/*
+console.log(comidasFavoritas);
+comidasFavoritas.push('helado');
+console.log(comidasFavoritas);
+*/
 
 
 // TAREA: console.log todo el array para verificar.
@@ -180,12 +175,17 @@
  */
 
 // TAREA: Intenta crear un array como una constante y modifica los valores que contiene.
+/*
+
+const a = [1, 2, 3, 4];
+console.log(a);
+a[0] = 3;
+console.log(a);
+a.push(5);
+console.log(a);
 
 
-
-
-
-
+*/
 
 // TAREA: Observa lo que sucede si agregas algo con.push(), cambias algo
 //       con notación de corchetes (array[1]) y
@@ -222,6 +222,7 @@
 
 */
 
+
 /*
     Bucles while (mientras)
     ============
@@ -245,11 +246,15 @@
 
 // TAREA: Usando un bucle 'while', decile a tu computadora que registre los números de
 //       diez a uno.
+/*
+let numero = 10;
+while (numero > 0) {
+    console.log(numero);
+    numero--;
+}
 
 
-
-
-
+*/
 
 /*
     Bucles for (para)
@@ -265,7 +270,16 @@
       console.log('Hola!');
     }
 */
-
+/*
+const notaParciales = [10, 9 , 2, 8];
+let totalNotas = 0;
+for (let i = 0; i < notaParciales.length; i++) {
+    totalNotas += notaParciales[i];
+}
+console.log(`Tu nota total es ${totalNotas}`);
+let promedio = totalNotas / notaParciales.length
+console.log(`Tu promedio es ${promedio}`);
+*/
 // TAREA: Imprimí cada 3er número del 3 al 22 usando un 'bucle for'.
 
 
