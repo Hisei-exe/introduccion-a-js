@@ -124,10 +124,11 @@
 //       variable llamada nuestroTitulo.
 //       Utilizá console.log para ver lo que obtuviste!
 
-
-
-
-
+/*
+let elementoH1 = document.querySelector('h1');
+console.log(elementoH1);
+console.log(elementoH1.innerText);
+*/
 
 /*
     Obteniendo elementos similares.
@@ -145,8 +146,8 @@
 */
 
 // TAREA: Obtené todos los elementos <li> de la página en una variable llamada mediaLinks.
-
-
+//let mediaLinks = document.querySelectorAll('li');
+//console.log(mediaLinks);
 
 
 
@@ -154,7 +155,7 @@
 // TAREA: Ahora utilizá console.log para ver la cantidad de 
 // elementos li que hay con mediaLinks.length
 
-
+//console.log(mediaLinks.length);
 
 
 
@@ -162,10 +163,11 @@
 // TAREA: ¿Te acordás de los bucles del nivel 2? Usando lo que sabés de ellos, realizá iteraciones
 //      sobre cada item de mediaLinks y mostralos en pantalla con console.log
 
-
-
-
-
+/*
+for (let i = 0; i < mediaLinks.length; i++) {
+    console.log(mediaLinks[i].innerText);
+}
+*/
 
 /*
     Propiedades de los elementos
@@ -184,10 +186,11 @@
 // TAREA: Obtené el contenido de nuestro elemento 'h1'
 // y utilizá console.log para mostrarlo.
 
+/*
+let head = document.querySelector('h1');
+console.log(head.textContent);
 
-
-
-
+*/
 
 /*
     Editar el contenido de la página
@@ -222,9 +225,10 @@
 */
 
 // TAREA: Actualizá el valor del atributo 'src' de nuestra etiqueta 'img' a "img/kittens.jpeg".
-
-
-
+/*
+const imagen = document.querySelector('img');
+imagen.src = 'img/kittens.jpeg';
+*/
 
 
 
@@ -248,9 +252,12 @@
 
 // Tarea: Obtené cualquier elemento de la página y cambiale algunos estilos.
 
-
-
-
+/*
+const head = document.querySelector('h1');
+head.style.backgroundColor = 'green';
+head.style.color = 'orange';
+head.style.fontSize = '120px';
+*/
 
 
 /*
@@ -264,11 +271,18 @@
     existingNode.appendChild(newNode); // agrega un newNode al final de existingNode.
 
     Ejemplo:
-
+*/ 
+/*
+  const texto = 'blabla'
     const nodoPagina = document.querySelector('body');
     const nuevoParrafo = document.createElement('p');
-    const textoParrafo = document.createTextNode('Yeeee!');
+    console.log(nuevoParrafo.innerText);
+    nuevoParrafo.innerText = 'HOLA';
+    console.log(nuevoParrafo.textContent);
+    const textoParrafo = document.createTextNode(texto);
+    textoParrafo.textContent = 'alala';
     nuevoParrafo.appendChild(textoParrafo);
+    console.log(nuevoParrafo.innerText);
     nodoPagina.appendChild(nuevoParrafo);
 */
 
@@ -277,11 +291,15 @@
 //       en nuestra cabecera.
 //
 // P.S. También les podés dar estilos al nuevo nodo que creaste.
-
-
-
-
-
+/*
+const head = document.querySelector('header');
+const nuevaImagen = document.createElement('img');
+nuevaImagen.src = 'img/woman_bw.jpg';
+nuevaImagen.style.backgroundColor = 'black';
+nuevaImagen.style.margin = '10px';
+console.log(nuevaImagen);
+head.appendChild(nuevaImagen);
+*/
 
 ////////////////////////////////////////////////////////////////////////////
 // ¡Felicidades! ¡Has terminado el Nivel 3 de JavaScript Básico!          //

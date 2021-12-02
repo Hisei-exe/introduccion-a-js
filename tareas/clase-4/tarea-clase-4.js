@@ -46,11 +46,8 @@ for (let i = 1; i <= 50; i++) {
     if (i % 5 === 0) {
         palabra += 'Buzz';
     }
-    if (palabra === '') {
-        console.log(i);
-    } else {
-        console.log(palabra);
-    }
+    console.log(palabra || i);
+    
 }
 */
 // Calcular el promedio de todos los números en un array de números. (y ponerlo en una función)

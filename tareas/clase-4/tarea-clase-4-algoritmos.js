@@ -4,23 +4,34 @@
 Estos desafíos de coding están enfocados para los principiantes, por lo tanto las soluciones fueron implementadas
 usando  elementos de programación simples y clásicos.
 */
-
 /*
-Desafío de programación #1: Imprimí los números del 1 al 10
+//Desafío de programación #1: Imprimí los números del 1 al 10
 
- Resultado: 10 9 8 7 6 5 4 3 2 1
+// Resultado: 10 9 8 7 6 5 4 3 2 1
+for (let i = 1; i <= 10; i++) {
+  console.log(i);
+}
+
 
  Desafìo de programación  #2: Imprimí los números impares del 1 al 100
 
  1 3 5 ... 99
 
-Desafío de programación #3: Imprimí la tabla de multiplicación del 7
+for (let i = 1; i <= 100; i += 2) {
+  console.log(i);
+}
+
+/*Desafío de programación #3: Imprimí la tabla de multiplicación del 7
 
  7x0 = 0
  7x1 = 7
  ...
  7x9 = 63
-
+const siete = 7;
+for (let i = 0; i <=9; i++) {
+  let resultado = siete * i;
+  console.log(`${siete} x ${i} = ${resultado}`);
+}
 Desafío de programación #4: Imprimí todas las tablas de multiplicación del 1 al 9
 
  1x0 = 0
@@ -33,17 +44,53 @@ Desafío de programación #4: Imprimí todas las tablas de multiplicación del 1
  ...
  9x9 = 81
 
+for (let i = 1; i <= 9; i++) {
+  for (let a = 0; a <= 9; a++) {
+    let resultado = i * a;
+    console.log(`${i} x ${a} = ${resultado}`);
+  }
+}
+
 Desafío de programación #5: Calcula el resultado de la suma de los numeros del 1 al 10 en un array.
  [1,2,3,4,5,6,7,8,9,10]
 
+let sumaTotal = 0;
+for (let i = 1; i <= 10; i++) {
+  sumaTotal += i;
+  console.log(sumaTotal);
+}
+
  1 + 2 + 3 + ... + 10 = ? //hacerlo con un array y un bucle
+
+const arrayNumeros = [1,2,3,4,5,6,7,8,9,10];
+let sumaTotal = 0;
+for (let i = 0; i < arrayNumeros.length; i++) {
+  sumaTotal += arrayNumeros[i];
+  console.log(sumaTotal);
+}
 
 Desafío de programación #6: Calcula 10! (10 factorial)
 
  10 * 9 * 8 * ... * 1
 
+let resultado = 1;
+for (let i = 1; i <= 10; i++) {
+  resultado *= i;
+  console.log(resultado);
+}
+
 Desafío de programación #7: Calcula la suma de todos los números impares mayores que 10 y menores que 30
 
+let resultado = 0;
+for (let i = 11; i <= 30; i += 2) {
+    resultado += i;
+    console.log(resultado);
+}
+
+-*************************-*-**********-****-*-*-*-**-*-*--*
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+*/
+/*
 Desafío de programación #8: Crea una función que convierta de Celsius a Fahrenheit
 
 Desafío de programación #9: Crea una función que convierta de Fahrenheit a Celsius
