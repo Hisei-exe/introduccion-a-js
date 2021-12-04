@@ -45,9 +45,8 @@ document.querySelector('#calcular-tiempo').onclick = function () {
 }
 
 function borrarClases() {
-    const $clases = document.querySelectorAll('.clases');
-    for (let i = 0; i < $clases.length; i++) {
-        $clases[i].remove();
+    while (document.querySelector('.clases')) {
+        document.querySelector('.clases').remove()
     }
 }
 function agregarClases(cantidadDeClases) {
