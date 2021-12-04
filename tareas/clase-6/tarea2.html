@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tarea 2</title>
+        <link rel="stylesheet" href="tarea2.css">
+    </head>
+    <body>
+        <form id="calculadora-de-salarios">
+            <div>
+                <label>Calculadora de salarios:</label>
+                <button type="button" id="agregar-miembro">Agregar miembro</button>
+                <button type="button" id="quitar-miembro" disabled>Quitar miembro</button>
+                <input type="submit" id="calcular" value="Calcular" disabled/>
+            </div>
+            <div id="contenedor">
+
+            </div>
+            <div id="resultados" class="oculto">
+                <label id="mayor-salario-anual">El mayor salario anual es...</label>
+                <label id="menor-salario-anual">El menor salario anual es...</label>
+                <label id="salario-anual-promedio">El salario anual promedio es...</label>
+                <label id="salario-mensual-promedio">El salario mensual promedio es...</label>
+            </div>
+        </form>
+        <script src="tarea2.js"></script>
+    </body>
+</html>
